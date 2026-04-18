@@ -7,7 +7,7 @@
 
 本项目是一套完整的**企业级健康管理 + AI 复合系统**，旨在帮助用户全面、便捷地管理个人健康数据。系统支持用户记录心率、血压、睡眠时长等多种健康指标，并允许**自定义健康项**，满足个性化需求。健康记录以**趋势图**和**表格**形式直观展示，支持**导出为 Excel**。每个健康项均设有阈值，超出范围时系统自动**预警**，帮助用户及时发现健康风险。
 
-系统深度集成 **AI 能力**，基于 **Qwen3-Max 大模型**，结合**健康知识库**进行检索增强生成（RAG），并接入**智谱 Web 搜索工具**实现联网搜索，显著提升回答的准确性和时效性。AI 通过 **Function Calling** 技术，支持用户通过**对话方式添加健康项和健康记录**，能够智能判断系统中是否已存在相应健康项，并引导用户完成创建。AI 还能根据已有健康数据生成**健康报告**，提供专业、个性化的健康建议。
+系统深度集成 **AI 能力**，基于 **Qwen3-Max 大模型**，结合**健康知识库**进行检索增强生成（RAG），并接入**智谱 Web 搜索MCP工具**实现联网搜索，显著提升回答的准确性和时效性。AI 通过 **Function Calling** 技术，支持用户通过**对话方式添加健康项和健康记录**，能够智能判断系统中是否已存在相应健康项，并引导用户完成创建。AI 还能根据已有健康数据生成**健康报告**，提供专业、个性化的健康建议。
 
 ## 技术架构
 
@@ -53,12 +53,28 @@
 
 ## 快速开始
 
-（待补充：环境要求、安装步骤、启动命令等）
+环境要求：最少JDK21，Nodejs22.18.0，MySQL8，IDEA工具版本建议2025以上，
+项目部署：
+将view导入vscode等开发软件，从src进入终端，终端里面输入npm i指令安装前端项目依赖，安装完成后输入pnpm dev启动前端
+将sql文件导入navicat等数据库软件
+IDEA打开api后，点击IDEA中的项目结构（Project Structure），在项目结构里面的 Modules，Sources 项选中 21 Lambdas，项目结构里面的 Modules，Dependencies 项选中 JDK1.8
+然后配置配置项目 Maven 环境
+第一步，选中 Settings（设置）：
+第二步，搜索 maven，出现 maven 后选中配置项，里面需要进行配置。
+Maven home path：指定成你自己本机的 maven 安装目录
+User settings file：你自己本机 maven 的配置文件
+Local repository：你自己本机指定的 maven 本地仓库
+配置文件信息修改（application.yml）
+数据库名
+你自己本机 MySQL 的账号密码
+
+进入阿里云百炼平台：https://bailian.console.aliyun.com/cn-beijing?spm=5176.29597918.J_SEsSjsNv72yRuRFS2VknO.2.692b7b08kJPWHV&tab=model#/model-market创建账号并开通获得apikey，将apikey填入langchain4j的api-key中；进入智谱大模型网站获取智谱的apikey，填入big-model的api-key中
+<img width="680" height="830" alt="image" src="https://github.com/user-attachments/assets/9e799d39-2b5f-4312-8828-d85214d54895" />
 
 ## 项目结构
 
-（待补充：核心目录结构说明）
-
+<img width="1074" height="806" alt="image" src="https://github.com/user-attachments/assets/eb509f4a-a526-485b-9e59-1dc4bb2ee496" />
+view前端、api后端、health2数据库
 ## 贡献指南
 
 欢迎提交 Issue 和 Pull Request。
