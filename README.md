@@ -84,7 +84,10 @@
 ### 1. 数据库配置
 将项目中的 SQL 文件导入 Navicat 等数据库管理工具中完成初始化。
 
-### 2. 后端配置（IDEA）
+### 2. 前端配置（VSCode/WebStorm等）
+将view导入vscode等开发软件，从src进入终端，终端里面输入npm i指令安装前端项目依赖，安装完成后输入pnpm dev启动前端
+
+### 3. 后端配置（IDEA）
 使用 IDEA 打开 `api` 后端项目，按以下步骤配置：
 
 #### 2.1 项目结构设置
@@ -99,7 +102,7 @@
    - `User settings file`：本机 Maven 配置文件路径
    - `Local repository`：本机 Maven 本地仓库路径
 
-### 3. 配置文件修改（application.yml）
+#### 2.3 配置文件修改（application.yml）
 修改后端配置文件，更新以下信息：
 - 数据库名称
 - MySQL 用户名
@@ -131,4 +134,4 @@
 | ---- | ---- |
 | view | 前端项目 |
 | api | 后端项目 |
-| health2 | 数据库相关文件 |
+| health2 | 数据库文件 |
