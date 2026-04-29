@@ -85,7 +85,7 @@
 将项目中的 SQL 文件导入 Navicat 等数据库管理工具中完成初始化。
 
 ### 2. 前端配置（VSCode/WebStorm等）
-将view导入vscode等开发软件，从src进入终端，终端里面输入npm i指令安装前端项目依赖，安装完成后输入pnpm dev启动前端
+将view导入VSCode等开发软件，从src进入终端，终端里面输入npm i指令安装前端项目依赖，安装完成后输入pnpm dev启动前端
 
 ### 3. 后端配置（IDEA）
 使用 IDEA 打开 `api` 后端项目，按以下步骤配置：
