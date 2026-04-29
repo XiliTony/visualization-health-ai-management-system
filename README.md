@@ -126,8 +126,8 @@
 
 ## 项目结构
 
-<p align="center">
-  <img width="1074" height="806" alt="项目结构图" src="https://github.com/user-attachments/assets/eb509f4a-a526-485b-9e59-1dc4bb2ee496" />
+<p align="left">
+  <img width="164" height="147" alt="image" src="https://github.com/user-attachments/assets/299126c4-7f04-442c-9efb-ebda2342cb09" />
 </p>
 
 | 目录 | 说明 |
