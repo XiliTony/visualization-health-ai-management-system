@@ -130,6 +130,8 @@
   <img width="164" height="147" alt="image" src="https://github.com/user-attachments/assets/299126c4-7f04-442c-9efb-ebda2342cb09" />
 </p>
 
+重要：存放项目的文件路径中不要有中文
+
 | 目录 | 说明 |
 | ---- | ---- |
 | view | 前端项目 |
