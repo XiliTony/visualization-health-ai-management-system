@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.noitidart.api.mapper.UserMapper">
+    <select id="getUserByAccount" resultType="com.noitidart.api.pojo.entity.User">
+        select * from `user` where account = #{account}
+    </select>
+
+    <insert id="insert" parameterType="com.noitidart.api.pojo.entity.User">
+        insert into `user` (account, username, password, avatar, role, create_time)
+        value (#{account}, #{username}, #{password}, #{avatar}, #{role}, #{createTime})
+    </insert>
+
+    <select id="getUserById" resultType="com.noitidart.api.pojo.entity.User">
+        select * from `user` where id = #{id}
+    </select>
+
+    <select id="selectAll" resultType="com.noitidart.api.pojo.entity.User">
+        select * from `user`
+        <where>
+            <if test="username != null and username != ''">and user.username like concat('%', #{username}, '%')</if>
+            <if test="role != null">and user.role = #{role}</if>
+        </where>
+        order by id desc
+    </select>
+
+    <update id="updateById" parameterType="com.noitidart.api.pojo.dto.UserUpdateDTO">
+        update `user` set account = #{account}, username = #{username}, password = #{password}, avatar = #{avatar}
+        where id = #{id}
+    </update>
+
+    <delete id="deleteById" parameterType="java.lang.Integer">
+        delete from `user` where id = #{id}
+    </delete>
+
+    <update id="updatePassword" parameterType="com.noitidart.api.pojo.dto.UserUpdatePasswordDTO">
+        update `user` set password = #{newPassword}
+        where id = #{id}
+    </update>
+
+</mapper>
