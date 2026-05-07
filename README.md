@@ -36,6 +36,8 @@
 |------|------|
 | SpringBoot3 | 遵循三层架构（Controller、Service、DAO） |
 | LangChain4j | 集成大语言模型开发能力 |
+| MySQL | 系统数据库，持久化聊天记忆 |
+| Pinecone向量数据库 | 存储知识库切片向量，用于检索增强生成|
 
 ### AI 能力集成
 | 能力 | 说明 |
@@ -121,6 +123,13 @@
 <p align="center">
   <img width="680" height="830" alt="配置示例" src="https://github.com/user-attachments/assets/9e799d39-2b5f-4312-8828-d85214d54895" />
 </p>
+
+#### 4.3 Pinecone向量知识库
+1. 进入Pinecone官网：https://www.pinecone.io/
+2. 注册账号，获取Pinecone API Key，注意每个账号只能获取一个，务必将其记下来，别的项目也能用
+   <img width="2549" height="1403" alt="image" src="https://github.com/user-attachments/assets/62b788ca-7f44-4e39-a443-ff202fe5277a" />
+3. EmbeddingStoreConfig类中将key填入.apiKey("")中
+   <img width="1466" height="1388" alt="image" src="https://github.com/user-attachments/assets/4cf0a0e7-92df-4932-8af3-a43b30ccb413" />
 
 ---
 
