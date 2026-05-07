@@ -29,7 +29,7 @@ public class EmbeddingStoreConfig {
     public EmbeddingStore<TextSegment> embeddingStore() {
         // 创建 Pinecone 向量存储实例
         PineconeEmbeddingStore embeddingStore = PineconeEmbeddingStore.builder()
-                .apiKey("pcsk_YVgTi_2k9NNnUTgkZHVBbrxU63nb7zLbQQ4wZ2MmAGcnqU87ALKFfrXh8fZ2eevJ473R4") // 从环境变量获取 API 密钥
+                .apiKey("") // 从环境变量获取 API 密钥
                 .index("health-index") // 索引名称（不存在则自动创建）
                 .nameSpace("health-namespace") // 命名空间（不存在则自动创建）
                 .createIndex(PineconeServerlessIndexConfig.builder()
